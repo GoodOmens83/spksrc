@@ -11,7 +11,7 @@ MAINTAINER = GoodOmens83
 DESCRIPTION = "Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments."
 ADMIN_PORT = 8085
 RELOAD_UI = yes
-DISPLAY_NAME = LIGHTTPD
+DISPLAY_NAME = lighttpd
 CHANGELOG = "Initial release"
 
 HOMEPAGE   = http://lighttpd.net
