@@ -1,0 +1,5 @@
+bin:bin/php
+bin:bin/php-cgi
+bin:bin/php-config
+bin:bin/phpize
+bin:sbin/php-fpm

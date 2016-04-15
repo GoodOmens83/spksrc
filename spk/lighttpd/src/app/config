@@ -1,0 +1,39 @@
+{
+	"defaults":{
+		"run-as": "package"
+	},
+	"username": "lighttpd",
+	"groupname": "lighttpd",
+	"ctrl-script": [{
+		"action": "postinst",
+		"run-as": "root"
+	}, {
+		"action": "preuninst",
+		"run-as": "root"
+	}, {
+		"action": "postuninst",
+		"run-as": "root"
+	}, {
+		"action": "preupgrade",
+		"run-as": "root"
+	}, {
+		"action": "start",
+		"run-as": "root"
+	}, {
+		"action": "stop",
+		"run-as": "root"
+	}],
+    ".url": {
+        "com.synocommunity.packages.lighttpd": {
+            "title": "lighttpd",
+            "desc": "lighttpd",
+            "icon": "images/lighttpd-{0}.png",
+            "type": "url",
+            "protocol": "http",
+            "port": "8085",
+            "url": "/",
+            "allUsers": true,
+            "grantPrivilege": "local"
+        }
+    }
+}
