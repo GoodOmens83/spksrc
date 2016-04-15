@@ -4,8 +4,8 @@ SPK_REV = 1
 SPK_ICON = src/lighttpd.png
 DSM_UI_DIR = app
 
-DEPENDS  = cross/php cross/lighttpd
-#SPK_DEPENDS = "python>2.7.3-3:git"
+DEPENDS  = cross/lighttpd
+SPK_DEPENDS = "php"
 
 MAINTAINER = GoodOmens83
 DESCRIPTION = "Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments."
@@ -41,7 +41,6 @@ lighttpd_extra_install:
 	install -m 755 -d $(STAGING_DIR)/var
 	install -m 755 -d $(STAGING_DIR)/var/php
 	install -m 600 src/config.ini $(STAGING_DIR)/var/config.ini
-	install -m 755 src/etc/php.ini $(STAGING_DIR)/var/php/php.ini
 	install -m 755 -d $(STAGING_DIR)/app
 	install -m 644 src/app/config $(STAGING_DIR)/app/config
 	install -m 755 -d $(STAGING_DIR)/app/images

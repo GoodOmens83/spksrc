@@ -14,7 +14,7 @@ LICENSE  = BSD
 
 PRE_CONFIGURE_TARGET = myPreConfigure
 GNU_CONFIGURE = 1
-CONFIGURE_ARGS +=-prefix=$(INSTALL_PREFIX) --with-mysql --with-mysqli --enable-json --enable-cgi --enable-simplexml --enable-libxml --disable-mbregex --enable-sockets --enable-fpm --disable-opcache --without-sqlite3 --without-pdo-sqlite --without-pear --with-libxml-dir=$(INSTALL_DIR)$(INSTALL_PREFIX) --with-config-file-path=/usr/local/lighttpd/var/php --disable-all
+CONFIGURE_ARGS +=-prefix=$(INSTALL_DIR)$(INSTALL_PREFIX) --with-mysql --with-mysqli --enable-json --enable-cgi --enable-simplexml --enable-libxml --disable-mbregex --enable-sockets --enable-fpm --disable-opcache --without-sqlite3 --without-pdo-sqlite --without-pear --with-libxml-dir=$(INSTALL_DIR)$(INSTALL_PREFIX) --with-config-file-path=/usr/local/lighttpd/var/php --disable-all
 
 ENV += PATH=$(INSTALL_DIR)$(INSTALL_PREFIX)/bin:$$PATH
 
