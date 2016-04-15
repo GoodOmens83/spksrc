@@ -7,12 +7,12 @@ DSM_UI_DIR = app
 DEPENDS  = cross/php cross/lighttpd
 #SPK_DEPENDS = "python>2.7.3-3:git"
 
-MAINTAINER = Diaoul
+MAINTAINER = GoodOmens83
 DESCRIPTION = "Security, speed, compliance, and flexibility -- all of these describe lighttpd (pron. lighty) which is rapidly redefining efficiency of a webserver; as it is designed and optimized for high performance environments."
 ADMIN_PORT = 8085
 RELOAD_UI = yes
 DISPLAY_NAME = LIGHTTPD
-CHANGELOG = "Maintenance release"
+CHANGELOG = "Initial release"
 
 HOMEPAGE   = http://lighttpd.net
 LICENSE    = GPL
@@ -25,12 +25,12 @@ FWPORTS          = src/${SPK_NAME}.sc
 
 INSTALL_PREFIX = /usr/local/$(SPK_NAME)
 
-POST_STRIP_TARGET = sickbeard-custom_extra_install
+POST_STRIP_TARGET = lighttpd_extra_install
 
 include ../../mk/spksrc.spk.mk
 
-.PHONY: sickbeard-custom_extra_install
-sickbeard-custom_extra_install:
+.PHONY: lighttpd_extra_install
+lighttpd_extra_install:
 	install -m 755 -d $(STAGING_DIR)/log
 	install -m 755 -d $(STAGING_DIR)/www
 	install -m 755 -d $(STAGING_DIR)/etc
